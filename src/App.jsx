@@ -14,32 +14,32 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="relativ min-h-screen flex flex-col items-center gap-20 md:gap-24">
+      <div className="relative min-h-screen flex flex-col items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24">
         {/* Particle background behind everything */}
         <div className=" inset-0  fixed top-0 left-0 w-full h-full -z-10">
           <ParticleBackground />
         </div>
 
         {/* Theme toggle */}
-        <div className="fixed top-4 right-4 z-10">
+        <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-10">
           <ThemeToggle />
         </div>
 
         {/* Main content layout */}
-        <div className="w-full p-[10px] md:p-0  max-w-4xl mx-aut flex flex-col items-center mt-24">
+        <div className="w-full px-3 sm:px-4 md:p-0 max-w-4xl mx-auto flex flex-col items-center mt-16 sm:mt-20 md:mt-24">
           {/* Title and name section */}
           <Hero />
 
           {/* Navbar */}
-          <div className="w-full">
+          <div className="w-full px-2 sm:px-0">
             <Navbar
               activeSection={activeSection}
               setActiveSection={setActiveSection}
             />
           </div>
           {/* Content area under navbar (can be routing or sections) */}
-          <div className="w-full ">
-            <main className="mt-6 mb-4  backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-6">
+          <div className="w-full px-2 sm:px-0 ">
+            <main className="mt-4 sm:mt-6 mb-4 backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-4 sm:p-6">
               {activeSection === "home" && <Home />}
               {activeSection === "about" && <About />}
               {activeSection === "skills" && <Skills />}

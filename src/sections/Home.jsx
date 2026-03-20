@@ -16,26 +16,26 @@ const MediaIcon = [
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center items-center ">
-      <h1 className="text-black dark:text-white text-3xl font-bold mb-4">
+    <div className="flex flex-col justify-center items-center w-full">
+      <h1 className="text-black dark:text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center">
         Welcome to My Portfolio{" "}
       </h1>
-      <p className="text-xl text-gray-700 dark:text-[#a3a3a3] mb-6  text-center ">
+      <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-[#a3a3a3] mb-6 text-center px-2 sm:px-0">
         Crafting digital experience with code and creativity Tech Enthusiast
         turned Software Enginner. I love building things and helping people.
         Very active on X(twitter).{" "}
       </p>
-      <div className="flex flex-col justify-center items-center ">
-        <div className=" flex gap-8 mb-6 justify-center items-center">
-          <p className="p-2 bg-white text-black flex rounded-md hover:bg-slate-300">
+      <div className="flex flex-col justify-center items-center w-full px-2 sm:px-0">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 mb-6 justify-center items-center">
+          <p className="p-2 bg-white text-black flex rounded-md hover:bg-slate-300 text-sm sm:text-base">
             View Projects{" "}
             <span>{<Icon.navIcon.ArrowRight className="ml-2 p-1" />}</span>
           </p>
-          <p className="text-white dark:text-white  bg-black p-2 border border-gray-300 dark:border-zinc-900 rounded-md hover:bg-zinc-900">
+          <p className="text-white dark:text-white bg-black p-2 border border-gray-300 dark:border-zinc-900 rounded-md hover:bg-zinc-900 text-sm sm:text-base">
             Contact Me
           </p>
         </div>
-        <ul className="flex  justify-center items-center gap-12 ">
+        <ul className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 ">
           {MediaIcon.map(({ href, icon }, index) => {
             const IconComponent = icon;
             return (

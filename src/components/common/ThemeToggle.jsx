@@ -39,14 +39,14 @@ const ThemeToggle = () => {
     <div className="relative inline-block text-left">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-sm sm:text-base"
       >
         {currentIcon[theme]}
-        <span className="text-sm capitalize font-medium">Theme</span>
+        <span className="capitalize font-medium hidden sm:inline">Theme</span>
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-900 shadow-xl rounded-xl z-50 p-2">
+        <div className="absolute right-0 mt-2 w-36 sm:w-40 bg-white dark:bg-gray-900 shadow-xl rounded-xl z-50 p-1 sm:p-2">
           <ul className="space-y-1">
             {options.map((opt) => (
               <li key={opt.value}>

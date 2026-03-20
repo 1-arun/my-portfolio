@@ -1,9 +1,8 @@
 import { Icon } from "../../assets/index";
 
-
-export default function Navbar({activeSection, setActiveSection}) {
+export default function Navbar({ activeSection, setActiveSection }) {
   const navLinks = [
-    { id: "home", label: "Home", icon: Icon.navIcon.Home },      
+    { id: "home", label: "Home", icon: Icon.navIcon.Home },
     { id: "about", label: "About", icon: Icon.navIcon.About },
     { id: "skills", label: "Skills", icon: Icon.navIcon.Skills },
     { id: "experience", label: "Experience", icon: Icon.navIcon.Experience },
@@ -11,15 +10,18 @@ export default function Navbar({activeSection, setActiveSection}) {
     { id: "contact", label: "Contact", icon: Icon.navIcon.Contact },
   ];
   return (
-    <nav className="flex justify-center items-center h-10 bg-white  dark:bg-zinc-900 rounded-xl mt-8 ">
-      <ul className="flex justify-center  items-center gap-8 sm:gap-10 md:gap-12 lg:gap-20 ">
+    <nav className="flex justify-center items-center h-10 bg-white  dark:bg-zinc-900 rounded-xl mt-6 sm:mt-8 w-full overflow-x-auto">
+      <ul className="flex justify-center items-center gap-4 sm:gap-8 sm:gap-10 md:gap-12 lg:gap-20 px-2 sm:px-0 whitespace-nowrap">
         {navLinks.map(({ id, label, icon }, index) => {
           const IconComponent = icon;
-          const isActive = activeSection === id; {/* check if active */}
+          const isActive = activeSection === id;
+          {
+            /* check if active */
+          }
           return (
             <li className="text-[#878787]" key={index}>
               <button
-                onClick={() => setActiveSection(id)} 
+                onClick={() => setActiveSection(id)}
                 className={`group flex items-center gap-2 transition ${
                   isActive
                     ? "text-cyan-400 " // Active state color
@@ -32,7 +34,7 @@ export default function Navbar({activeSection, setActiveSection}) {
                   strokeWidth={2}
                 />
                 {/* Show label only on small+ screens */}
-                <span className="hidden sm:inline">{label}</span> 
+                <span className="hidden sm:inline">{label}</span>
               </button>
             </li>
           );
