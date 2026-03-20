@@ -2,17 +2,12 @@ import ParticleBackground from "./components/particle/ParticleBackground";
 import Hero from "./sections/Hero";
 import Navbar from "./components/layout/Navbar";
 import { ThemeProvider } from "./components/common/ThemeContext";
+import ThemeToggle from "./components/common/ThemeToggle";
 import Home from "./sections/Home";
 import { useState } from "react";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experiences from "./sections/Experiences";
-
-
-
-
-
-
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -27,7 +22,7 @@ export default function App() {
 
         {/* Theme toggle */}
         <div className="fixed top-4 right-4 z-10">
-          {/* ThemeToggle component here */}
+          <ThemeToggle />
         </div>
 
         {/* Main content layout */}
@@ -44,12 +39,11 @@ export default function App() {
           </div>
           {/* Content area under navbar (can be routing or sections) */}
           <div className="w-full ">
-          
             <main className="mt-6 mb-4  backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-6">
-              {activeSection === "home" && (<Home />)}
-              {activeSection === "about" && (<About /> )}
-              {activeSection === "skills" && (<Skills />)}
-              {activeSection === "experience" && ( <Experiences />)}
+              {activeSection === "home" && <Home />}
+              {activeSection === "about" && <About />}
+              {activeSection === "skills" && <Skills />}
+              {activeSection === "experience" && <Experiences />}
               {activeSection === "project" && (
                 <div>Projects Section - Create Project.jsx</div>
               )}
