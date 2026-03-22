@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
@@ -22,7 +21,9 @@ export const ThemeProvider = ({ children }) => {
         root.classList.add("light");
         root.classList.remove("dark");
       } else {
-        const isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isSystemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
         root.classList.toggle("dark", isSystemDark);
         root.classList.toggle("light", !isSystemDark);
       }
@@ -39,4 +40,5 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => useContext(ThemeContext);

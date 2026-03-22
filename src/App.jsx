@@ -14,6 +14,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const MotionDiv = motion.div;
   const sectionComponents = {
     home: <Home setActiveSection={setActiveSection} />,
     about: <About />,
@@ -52,7 +53,7 @@ export default function App() {
           <div className="w-full px-2 sm:px-0 ">
             <main className="mt-4 sm:mt-6 mb-4 backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-4 sm:p-6 lg:p-8">
               <AnimatePresence mode="wait" initial={false}>
-                <motion.div
+                <MotionDiv
                   key={activeSection}
                   initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -60,7 +61,7 @@ export default function App() {
                   transition={{ duration: 0.28, ease: "easeOut" }}
                 >
                   {sectionComponents[activeSection]}
-                </motion.div>
+                </MotionDiv>
               </AnimatePresence>
             </main>
           </div>
