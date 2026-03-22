@@ -8,9 +8,20 @@ import { useState } from "react";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experiences from "./sections/Experiences";
+import Projects from "./sections/Projects";
+import Contacts from "./sections/Contacts";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const sectionComponents = {
+    home: <Home setActiveSection={setActiveSection} />,
+    about: <About />,
+    skills: <Skills />,
+    experience: <Experiences />,
+    project: <Projects />,
+    contact: <Contacts />,
+  };
 
   return (
     <ThemeProvider>
@@ -26,7 +37,7 @@ export default function App() {
         </div>
 
         {/* Main content layout */}
-        <div className="w-full px-3 sm:px-4 md:p-0 max-w-4xl mx-auto flex flex-col items-center mt-16 sm:mt-20 md:mt-24">
+        <div className="w-full px-3 sm:px-4 md:px-5 lg:px-0 max-w-4xl mx-auto flex flex-col items-center mt-16 sm:mt-20 md:mt-24">
           {/* Title and name section */}
           <Hero />
 
@@ -39,17 +50,18 @@ export default function App() {
           </div>
           {/* Content area under navbar (can be routing or sections) */}
           <div className="w-full px-2 sm:px-0 ">
-            <main className="mt-4 sm:mt-6 mb-4 backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-4 sm:p-6">
-              {activeSection === "home" && <Home />}
-              {activeSection === "about" && <About />}
-              {activeSection === "skills" && <Skills />}
-              {activeSection === "experience" && <Experiences />}
-              {activeSection === "project" && (
-                <div>Projects Section - Create Project.jsx</div>
-              )}
-              {activeSection === "contact" && (
-                <div>Contact Section - Create Contact.jsx</div>
-              )}
+            <main className="mt-4 sm:mt-6 mb-4 backdrop-blur-sm border border-gray-300 dark:bg-zinc-950 dark:border-zinc-900 rounded-lg p-4 sm:p-6 lg:p-8">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={activeSection}
+                  initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: -12, filter: "blur(4px)" }}
+                  transition={{ duration: 0.28, ease: "easeOut" }}
+                >
+                  {sectionComponents[activeSection]}
+                </motion.div>
+              </AnimatePresence>
             </main>
           </div>
         </div>

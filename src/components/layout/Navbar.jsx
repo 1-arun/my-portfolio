@@ -10,8 +10,8 @@ export default function Navbar({ activeSection, setActiveSection }) {
     { id: "contact", label: "Contact", icon: Icon.navIcon.Contact },
   ];
   return (
-    <nav className="flex justify-center items-center h-10 bg-white  dark:bg-zinc-900 rounded-xl mt-6 sm:mt-8 w-full overflow-x-auto">
-      <ul className="flex justify-center items-center gap-4 sm:gap-8 sm:gap-10 md:gap-12 lg:gap-20 px-2 sm:px-0 whitespace-nowrap">
+    <nav className="flex justify-center items-center h-10 sm:h-11 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl mt-6 sm:mt-8 w-full overflow-x-auto shadow-sm dark:shadow-md">
+      <ul className="flex w-full justify-between items-center gap-1 sm:gap-2 md:gap-3 px-2 whitespace-nowrap min-w-max sm:min-w-0">
         {navLinks.map(({ id, label, icon }, index) => {
           const IconComponent = icon;
           const isActive = activeSection === id;
@@ -22,10 +22,10 @@ export default function Navbar({ activeSection, setActiveSection }) {
             <li className="text-[#878787]" key={index}>
               <button
                 onClick={() => setActiveSection(id)}
-                className={`group flex items-center gap-2 transition ${
+                className={`group flex items-center gap-2 rounded-md px-3 py-1.5 transition-colors duration-200 ${
                   isActive
-                    ? "text-cyan-400 " // Active state color
-                    : "text-[#878787] hover:text-cyan-400" // Default and hover
+                    ? "bg-gray-100 text-gray-900 dark:bg-black dark:text-white"
+                    : "text-gray-700 hover:bg-gray-100 hover:text-gray-800 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white"
                 }`}
               >
                 <IconComponent
