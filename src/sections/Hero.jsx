@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="flex  items-center justify-center flex-wrap">
         <p className="text-base sm:text-lg md:text-xl font-normal text-gray-700 dark:text-gray-300 tracking-tight">
           {siteConfig.title}
-        </p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </p>
         <OnlineStatus isOnline={siteConfig.online} />
       </div>
     </div>
