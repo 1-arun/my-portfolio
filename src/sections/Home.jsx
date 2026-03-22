@@ -27,11 +27,11 @@ const Home = ({ setActiveSection }) => {
         Very active on X(twitter).{" "}
       </p>
       <div className="flex flex-col justify-center items-center w-full px-2 sm:px-0">
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 mb-6 justify-center items-center">
+        <div className="mb-6 flex w-full max-w-sm flex-row items-center justify-between gap-3 sm:max-w-none sm:justify-center sm:gap-6 md:gap-8">
           <button
             type="button"
             onClick={() => setActiveSection("project")}
-            className="p-2 bg-white text-black flex rounded-md hover:bg-gray-100 text-sm sm:text-base transition-colors"
+            className="flex items-center rounded-md bg-white p-2 text-sm text-black transition-colors hover:bg-gray-100 sm:text-base"
           >
             View Projects{" "}
             <span>{<Icon.navIcon.ArrowRight className="ml-2 p-1" />}</span>
@@ -39,7 +39,7 @@ const Home = ({ setActiveSection }) => {
           <button
             type="button"
             onClick={() => setActiveSection("contact")}
-            className="text-white dark:text-white bg-black p-2 border border-gray-300 dark:border-zinc-900 rounded-md hover:bg-zinc-900 text-sm sm:text-base"
+            className="rounded-md border border-gray-300 bg-black p-2 text-sm text-white hover:bg-zinc-900 dark:border-zinc-900 dark:text-white sm:text-base"
           >
             Contact Me
           </button>

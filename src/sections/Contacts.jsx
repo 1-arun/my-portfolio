@@ -44,11 +44,11 @@ export default function Contacts() {
               <div className="rounded-lg border border-gray-300 bg-white p-3 transition-colors dark:border-zinc-700 dark:bg-zinc-900">
                 <Mail size={20} className="text-zinc-700 dark:text-zinc-200" />
               </div>
-              <div>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="min-w-0">
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 sm:text-sm">
                   Email
                 </p>
-                <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                <p className="break-all text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">
                   {siteConfig.socials.email}
                 </p>
               </div>
@@ -68,10 +68,10 @@ export default function Contacts() {
                 />
               </div>
               <div>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 sm:text-sm">
                   Twitter / X
                 </p>
-                <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">
                   @1Arun_
                 </p>
               </div>
@@ -91,10 +91,10 @@ export default function Contacts() {
                 />
               </div>
               <div>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 sm:text-sm">
                   LinkedIn
                 </p>
-                <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">
                   Arun Chauhan
                 </p>
               </div>
