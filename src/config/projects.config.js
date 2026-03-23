@@ -12,8 +12,8 @@ const projectsData = [
       "Next.js",
       "CoinGecko API",
     ],
-    codeLink: "#",
-    liveLink: "#",
+    codeLink: "https://github.com/1-arun/crypto-dashboard-",
+    liveLink: "https://crypto-dashboard-silk-chi.vercel.app/",
     image: "/images/crypto-dashboard.png",
   },
   {
@@ -22,11 +22,10 @@ const projectsData = [
     description:
       "Built a Kanban task manager with task creation, editing, and status updates.",
     technologies: ["React", "Typescript", "Shadcn UI", "Tailwind CSS"],
-    codeLink: "#",
-    liveLink: "#",
-    image: "/images/project-kanban.png                                                                                                                                          ",
+    codeLink: "https://github.com/1-arun/project-kanban",
+    liveLink: "https://project-kanban-woad.vercel.app/",
+    image: "/images/project-kanban.png",
   },
 ];
 
-export default projectsData;              
-                                                                
+export default projectsData;
