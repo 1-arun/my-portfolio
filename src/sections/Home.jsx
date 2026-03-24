@@ -9,7 +9,7 @@ const MediaIcon = [
   { href: "mailto:codeswitharun@gmail.com", icon: Icon.navIcon.Email },
   { href: "https://x.com/1Arun_", icon: Icon.socialIcons.Twitter },
   {
-    href: "/resume/resume_arun_frontend.pdf",
+    href: "/resume/Arun_Chauhan_Resume.pdf",
     icon: Icon.navIcon.Download,
     download: true,
   },
@@ -52,14 +52,14 @@ const Home = ({ setActiveSection }) => {
                 <a
                   href={href}
                   {...(download
-                    ? { download: "Arun-Chauhan-Frontend-Resume.pdf" }
+                    ? { download: true }
                     : { target: "_blank", rel: "noopener noreferrer" })}
                   className="group inline-flex items-center justify-center rounded-md p-2 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800/60"
                 >
                   <IconComponent
                     className="transition-transform duration-300 ease-out group-hover:rotate-12"
-                    sx={{ fontSize: 17 }} // For MUI
-                    size={17} // For Lucide
+                    sx={{ fontSize: 17 }}
+                    size={17}
                     strokeWidth={1.8}
                   />
                 </a>
