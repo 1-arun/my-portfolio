@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "1+", label: "Years professional exp." },
+    { number: "2+", label: "Years professional exp." },
     { number: "Full", label: "Stack in progress" },
     { number: "MVP", label: "Mindset & delivery" },
   ];
@@ -24,7 +24,7 @@ const About = () => {
         <p className="text-xs sm:text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-light">
           I am a dedicated recent graduate with{" "}
           <span className="font-semibold text-black dark:text-white">
-            1+ year of professional frontend experience
+            2 years of professional frontend experience
           </span>
           , currently expanding into backend development. I collaborate with
           teams and stakeholders to deliver{" "}
