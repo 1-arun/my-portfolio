@@ -9,7 +9,7 @@ const MediaIcon = [
   { href: "mailto:codeswitharun@gmail.com", icon: Icon.navIcon.Email },
   { href: "https://x.com/1Arun_", icon: Icon.socialIcons.Twitter },
   {
-    href: "/resume/Arun_Chauhan_Resume.pdf",
+    href: "/resume/arun_frontend_resume.pdf",
     icon: Icon.navIcon.Download,
     download: true,
   },
